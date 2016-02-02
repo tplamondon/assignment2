@@ -5,16 +5,16 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>height</th>
-    <th>weight</th>
+    <th>height(cm)</th>
+    <th>weight(kg)</th>
     <th>age</th>
     <th>gender</th>
     <th>ethnicity</th>
     <th colspan="3"></th>
   </tr>
  
-  <% @persons.each do |person| %>
-    <tr style="color:rgb(<%person.red %>,<%person.green %>,<%person.blue %>)">
+  <% @people.each do |person| %>
+    <tr style=<% "color:rgb(" + person.red.to_s + "," + person.green.to_s + "," + person.blue.to_s + ");" %> > <!-- This isn't working still, should change the text colour //-->
       <td><%= person.name %></td>
       <td><%= person.height %></td>
       <td><%= person.weight %></td>

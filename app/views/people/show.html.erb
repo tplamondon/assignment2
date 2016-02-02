@@ -1,18 +1,32 @@
 <p>
-  <strong>Title:</strong>
-  <%= @person.title %>
+  <strong>Name:</strong>
+  <%= @person.name %>
 </p>
  
 <p>
-  <strong>Text:</strong>
-  <%= @person.text %>
+  <strong>Weight:</strong>
+  <%= @person.weight %>kg
 </p>
- 
-<h2>Comments</h2>
-<%= render @person.comments %>
- 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
+
+<p>
+  <strong>Height:</strong>
+  <%= @person.height %>cm
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @person.age %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @person.gender %>
+</p>
+
+<p>
+  <strong>Ethnicity:</strong>
+  <%= @person.ethnicity %>
+</p>
  
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>
