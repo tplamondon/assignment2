@@ -14,7 +14,7 @@
   </tr>
  
   <% @people.each do |person| %>
-    <tr style=<% "color:rgb(" + person.red.to_s + "," + person.green.to_s + "," + person.blue.to_s + ");" %> > <!-- This isn't working still, should change the text colour //-->
+    <tr style=<%= "color:rgb(" + person.red.to_s + "," + person.green.to_s + "," + person.blue.to_s + ");" %> > <!-- This isn't working still, should change the text colour //-->
       <td><%= person.name %></td>
       <td><%= person.height %></td>
       <td><%= person.weight %></td>

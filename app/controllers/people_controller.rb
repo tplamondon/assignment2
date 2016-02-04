@@ -1,7 +1,13 @@
 class PeopleController < ApplicationController
   
+  http_basic_authenticate_with name: "admin", password: "secret", except: [:index, :show]
+  
   def index
     @people = Person.all
+  end
+  
+  def show
+    @person = Person.find(params[:id])
   end
 
   def new
@@ -12,9 +18,6 @@ class PeopleController < ApplicationController
     @person = Person.find(params[:id])
   end
   
-  def show
-    @person = Person.find(params[:id])
-  end
 
   #following is ...
   
