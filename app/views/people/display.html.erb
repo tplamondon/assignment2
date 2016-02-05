@@ -1,0 +1,21 @@
+
+<body class="bodyDisplay">
+    <div class=container>
+        <H1>Displaying all People</H1>
+        <div id="overlayedImage"></div>
+
+        <div>
+            <% @people.each do |person| %>
+                <div class="rect" style="background-color:rgb(<%= person.red.to_s + "," + person.green.to_s + "," + person.blue.to_s %> ); width:<%= 2*person.weight %>px; height:<%= 2*person.height %>px;" >
+                    <p><%= person.name %></p>
+                    <p><%= person.age %></p>
+                    <p><%= person.gender %></p>
+                    <p><%= person.ethnicity %></p>
+                </div>
+        <% end %>
+       </div>
+     <br>
+    <%= link_to 'Back', people_path %>
+    </div>
+
+</body>

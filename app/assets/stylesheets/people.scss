@@ -1,3 +1,59 @@
 // Place all the styles related to the people controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//body {
+//    background-image: url("Test Pic 7.png");
+//}
+
+body{
+  background-image: url("cutiep.jpg");
+}
+body.bodyDisplay {
+  min-height: 90%;
+  min-width: 90%;
+  //margin: 0;
+  //padding: 0;
+  background-image: url("cutiep.jpg");
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, td, th.BorderDraw{
+    border: 1px solid black;
+    padding: 5px;
+    background-color: white;
+}
+td, th{
+    min-width: 100px;
+}
+
+div.container{
+    //position: relative;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+//for the display area
+div.rect{
+    display: inline-block
+}
+
+//not sure if still needed, I'm just changing the body's background Image
+div#backgroundImage{
+    //background-image: url("cutiep.jpg");
+}
+div#overlayedImage{
+    position: absolute;
+    //top: 10px;
+    //right: 10px;
+    bottom: 0%;
+    right: 0%;
+    min-width: 1176px;
+    height: 615px;
+    background-image: url("overlay2.png");
+}

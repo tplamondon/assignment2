@@ -1,8 +1,12 @@
 class PeopleController < ApplicationController
   
-  http_basic_authenticate_with name: "admin", password: "secret", except: [:index, :show]
+  http_basic_authenticate_with name: "admin", password: "secret", except: [:index, :show, :display]
   
   def index
+    @people = Person.all
+  end
+  
+  def display
     @people = Person.all
   end
   
